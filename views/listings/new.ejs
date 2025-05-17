@@ -1,0 +1,73 @@
+<% layout('/layouts/boilerplate') %>
+<div class="row">
+    <div class="col-8 offset-2">
+    <br>
+    <h3 style="text-align: center;">Create a new Listing</h3>
+    <br>
+   <form enctype="multipart/form-data" class="needs-validation" method="POST" action="/listings" novalidate>
+      <div>
+
+        <label for="title" class="form-label">Title</label>
+        <input name="title" placeholder="Enter title" type="text" class="form-control" required>
+        <div class="valid-feedback">
+            Looks Good
+        </div>
+        </div>
+        <br>
+        <div>
+            <label for="description" class="form-label">Description</label>
+            <textarea name="description" placeholder="Enter description" class="form-control" required></textarea>
+        </div>
+        <br>
+       
+       
+         <div>
+
+        <label for="image" class="form-label">Upload Listing Image</label>
+        <input name="image" type="file" placeholder="Give proper file name" class="form-control" required>
+        
+        </div>
+        <br>
+       
+
+        <div class="row">
+            <div class="col-6">
+                <label for="price" class="form-label">Price</label>
+                <input name="price"  placeholder="Enter Price" class="form-control" required>
+                <div class="invalid-feedback">
+                Price should be valid.Please enter a valid price
+                </div>
+        </div>
+                <br>
+                
+        
+                <div class="col-6">
+        
+                    <label for="country" class="form-label">Country</label>
+                <input name="country" placeholder="Enter Country name " class="form-control" required>
+                     <div class="invalid-feedback">
+               Please Enter the country name
+                </div>
+                 </div>
+        </div>
+        
+         <br>
+     
+        <div>
+            <label for="location" class="form-label">Location</label>
+        <input name="location" placeholder="Enter location" class="form-control"required>
+        <div class="invalid-feedback">
+            Please Enter the location
+        </div>
+        </div>
+        <br>
+         
+
+
+        <button class="btn btn-dark add-btn">Add</button>
+
+    </form>
+    <br>
+</div>
+
+</div>
