@@ -75,9 +75,14 @@ app.use(express.static(path.join(__dirname, "/public")));
 app.use((req, res, next) => {
     res.locals.success = req.flash("success");
     res.locals.error = req.flash("error");
-    res.locals.currUser = req.user;  // this ensures currUser is always defined in views
+   
     next();
 });
+app.use((req, res, next) => {
+  res.locals.currUser = req.user; // assuming you use passport or similar and have req.user set when logged in
+  next();
+});
+
 
 app.use("/listings", listingRouter);
 app.use("/listings/:id/reviews", reviewRouter);
