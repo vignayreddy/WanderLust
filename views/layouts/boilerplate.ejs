@@ -18,17 +18,14 @@
   <script src="https://cdn.maptiler.com/maptiler-sdk-js/v3.2.0/maptiler-sdk.umd.min.js"></script>
   <link href="https://cdn.maptiler.com/maptiler-sdk-js/v3.2.0/maptiler-sdk.css" rel="stylesheet" />
 </head>
-
 <body>
-   <%- include("../includes/navbar.ejs") %>
- 
-     <div class="container">
-       <%- include("../includes/flash.ejs") -%>   <%- body %>
-     </div>
-     <%= success %>
-     <%- include("../includes/footer.ejs")%>
-   
+   <%- include("includes/navbar") %>
 
-
-   </body>
+   <div class="container">
+     <%- include("includes/flash") %>  
+     <%- body %>
+   </div>
+   <%= success %>
+   <%- include("includes/footer") %>
+</body>
 </html>
